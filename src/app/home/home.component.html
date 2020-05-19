@@ -1,1 +1,11 @@
-<p>Hello World!</p>
+<app-current-post [blog]="blogs[0]"></app-current-post>
+
+<h1>All Blog</h1>
+
+<article (click)="goto(blog)" *ngFor="let blog of blogs.slice(1, blogs.length)">
+  <h3>Episode #{{ blog.number }}</h3>
+  <h2>{{ blog.title }}</h2>
+  <h4>{{ blog.published | date: 'shortDate' }}</h4>
+  <p>{{ blog.description }}</p>
+  <p><a [routerLink]="blog.route">Find more</a></p>
+</article>

@@ -1,20 +1,22 @@
+import { ScullyLibModule } from '@scullyio/ng-lib';
 import { SharedModule } from './../current-post/shared.module';
+import { BlogComponent } from './blog.component';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [BlogComponent],
   imports: [
     CommonModule,
     SharedModule,
+    ScullyLibModule,
     RouterModule.forChild([
       {
-        path: '',
-        component: HomeComponent
+        path: ':slug',
+        component: BlogComponent,
       }
     ])
   ]
 })
-export class HomeModule {}
+export class BlogModule {}

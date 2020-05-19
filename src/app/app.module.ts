@@ -9,7 +9,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,8 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
       {
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
-      }
+      },
+      { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     ]),
     ScullyLibModule
   ],
