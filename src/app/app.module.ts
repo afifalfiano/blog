@@ -14,6 +14,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ScullyLibModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -23,9 +24,9 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       },
-      { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
+      { path: 'blog', 
+      loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     ]),
-    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
