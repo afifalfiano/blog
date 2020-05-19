@@ -1,7 +1,7 @@
 ---
 title: third-post
 description: blog description
-published: true
+publish: true
 ---
 
 # third-post

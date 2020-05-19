@@ -2,10 +2,16 @@
 
 <h1>All Blog</h1>
 
-<article (click)="goto(blog)" *ngFor="let blog of blogs.slice(1, blogs.length)">
+<article *ngFor="let blog of $blogPosts | async">
+  <h3>{{ blog.title }}</h3>
+  <h4>{{ nowDate }}</h4>
+  <p>{{ blog.description }}</p>
+  <p><a [routerLink]="blog.route"> Baca Selengkapnya </a></p>
+</article>
+<!-- <article (click)="goto(blog)" *ngFor="let blog of blogs.slice(1, blogs.length)">
   <h3>Episode #{{ blog.number }}</h3>
   <h2>{{ blog.title }}</h2>
   <h4>{{ blog.published | date: 'shortDate' }}</h4>
   <p>{{ blog.description }}</p>
   <p><a [routerLink]="blog.route">Find more</a></p>
-</article>
+</article> -->

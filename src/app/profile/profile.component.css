@@ -47,7 +47,7 @@ img.myProfile{
 }
 
 blockquote{
-    position: absolute;
+    position: relative;
     padding:10px;
     border-left: 5px solid beige;
     margin: 5px 150px 0;

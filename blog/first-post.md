@@ -1,7 +1,7 @@
 ---
 title: first-post
 description: blog description
-published: true
+publish: true
 ---
 
 # first-post

@@ -18,3 +18,10 @@ footer p{
     align-content: center;
     color: rgba(255, 255, 255, 0.68);
 }
+
+.footer-wrap{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    min-height: 50vh;
+}
