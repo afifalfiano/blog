@@ -22,8 +22,9 @@ export class BlogComponent implements OnInit {
     this.blogsSvc.blogs$.subscribe(
       blogs =>
         (this.currentPost = blogs.filter(
-          e => e.route === this.routerSvc.routerState.snapshot.url
+          b => b.route === this.routerSvc.routerState.snapshot.url
         ).pop())
     );
+    console.log(this.blogsSvc.blogs$);
   }
 }

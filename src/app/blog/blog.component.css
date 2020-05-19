@@ -16,3 +16,7 @@ h1 {
   min-width: 300px;
   margin: auto;
 }
+
+.loading{
+  text-align: center;
+}
