@@ -4,15 +4,15 @@ const {DisableAngular} = require('scully-plugin-disable-angular');
 const postRenderers = [DisableAngular, MinifyHtml];
 
 exports.config = {
-  projectRoot: "./src/app",
-  projectName: "blog",
+  projectRoot: './src',
+  projectName: 'blog',
   defaultPostRenderers: postRenderers,
-  outDir: "./dist/static",
+  outDir: './dist/static',
   routes: {
     '/blog/:slug': {
-      type: "contentFolder",
+      type: 'contentFolder',
       slug: {
-        folder: "./blog"
+        folder: './blog'
       },
     },
   },

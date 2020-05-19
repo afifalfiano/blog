@@ -6,14 +6,14 @@
 
 
 
-<div *ngIf="currentPost">
+<div>
     <app-current-post [blog]="currentPost">
       <app-current-post> </app-current-post>
     </app-current-post>
     <section class="blog-content">
       <scully-content></scully-content>
     </section>
-  </div>
+</div>
   <div class="loading" *ngIf="!currentPost">
     Loading...
   </div>

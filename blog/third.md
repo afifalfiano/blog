@@ -1,7 +1,8 @@
 ---
 title: third
 description: blog description
-published: true
+publish: true
+authorName: Corbin Crutchley
 ---
 
 # third

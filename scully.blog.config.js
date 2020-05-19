@@ -2,15 +2,15 @@ var MinifyHtml = require('scully-plugin-minify-html').MinifyHtml;
 var DisableAngular = require('scully-plugin-disable-angular').DisableAngular;
 var postRenderers = [DisableAngular, MinifyHtml];
 exports.config = {
-    projectRoot: "./src/app",
-    projectName: "blog",
+    projectRoot: './src',
+    projectName: 'blog',
     defaultPostRenderers: postRenderers,
-    outDir: "./dist/static",
+    outDir: './dist/static',
     routes: {
         '/blog/:slug': {
-            type: "contentFolder",
+            type: 'contentFolder',
             slug: {
-                folder: "./blog"
+                folder: './blog'
             },
         },
     },

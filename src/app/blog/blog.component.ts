@@ -25,6 +25,6 @@ export class BlogComponent implements OnInit {
           b => b.route === this.routerSvc.routerState.snapshot.url
         ).pop())
     );
-    console.log(this.blogsSvc.blogs$);
+    console.log(this.currentPost);
   }
 }

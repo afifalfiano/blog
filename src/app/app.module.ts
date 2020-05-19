@@ -24,7 +24,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       },
-      { path: 'blog', 
+      { path: 'blog',
       loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     ]),
   ],

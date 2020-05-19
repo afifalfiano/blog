@@ -22,7 +22,7 @@ export class Blogs {
           return new Date(bdate).getTime() - new Date(adate).getTime();
         });
       return routeList
-        .filter((route: ScullyRoute) => route.route.startsWith(`/current-post/`))
+        .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`))
         .map((e, idx) => ({ ...e, number: routeList.length - idx }));
     })
   ) as Observable<Blog[]>;
