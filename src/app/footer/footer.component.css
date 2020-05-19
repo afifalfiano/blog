@@ -1,0 +1,20 @@
+footer {
+    clear: both;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #303030;
+    height: 35px;
+    width: 100%;
+}
+
+footer p{
+    display: flex;
+    margin-top:8px;
+    font-size: 12px;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    color: rgba(255, 255, 255, 0.68);
+}
