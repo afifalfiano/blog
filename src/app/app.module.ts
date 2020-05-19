@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     BrowserModule,
     HttpClientModule,
     ScullyLibModule,
+    PaginationModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',
@@ -24,7 +26,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       },
-      { path: 'blog', 
+      { path: 'blog',
       loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     ]),
   ],

@@ -1,9 +1,11 @@
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { Blogs } from './../current-post/blogs';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Output, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Blog } from '../current-post/current-post.component';
 import { map } from 'rxjs/operators';
+import { PageChangedEvent } from 'ngx-bootstrap/pagination';
+
 
 @Component({
   selector: 'app-home',
@@ -13,23 +15,34 @@ import { map } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class HomeComponent implements OnInit {
-  nowDate = new Date();
-  blogs = [];
+  blogs: any = [];
+  blogPosts: any = [];
+  returnedArray: string[];
+
   constructor(private blogsSvc: Blogs, private routerSvc: Router,
               private scullySvc: ScullyRoutesService) {}
 
-  $blogPosts = this.scullySvc.available$.pipe(
-    map(routes =>
-      routes.filter(
-        route =>
-          route.route.startsWith('/blog/') && route.sourceFile.endsWith('.md')
+  ngOnInit(): void {
+    this.blogPosts = this.scullySvc.available$.pipe(
+      map(routes =>
+        routes.filter(
+          route =>
+            route.route.startsWith('/blog/') && route.sourceFile.endsWith('.md'),
+        )
       )
-    )
-  );
+    );
 
-  ngOnInit() {
-    this.blogsSvc.blogs$.subscribe(blogs => (this.blogs = blogs));
+    this.scullySvc.available$.subscribe(data => {
+      data.forEach((n) => this.blogs.push(n));
+    });
     console.log(this.blogs);
+
+  }
+
+  pageChanged(event: PageChangedEvent) {
+    const startItem = (event.page - 1) * event.itemsPerPage;
+    const endItem = event.page * event.itemsPerPage;
+    this.blogs = this.blogs.slice(startItem, endItem);
   }
 
   goto(blog: Blog) {

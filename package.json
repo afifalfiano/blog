@@ -24,6 +24,8 @@
     "@scullyio/init": "0.0.28",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "font-awesome": "^4.7.0",
+    "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.5.4",
     "scully-plugin-disable-angular": "^3.1.1",
     "scully-plugin-minify-html": "^2.3.1",

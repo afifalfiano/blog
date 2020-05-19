@@ -1,13 +1,24 @@
-<app-current-post [blog]="blogs[0]"></app-current-post>
+<app-current-post></app-current-post>
 
-<h1>All Blog</h1>
+<h1>Sharing is Caring</h1>
 
-<article *ngFor="let blog of $blogPosts | async">
-  <h3>{{ blog.title }}</h3>
-  <h4>{{ nowDate }}</h4>
-  <p>{{ blog.description }}</p>
-  <p><a [routerLink]="blog.route"> Baca Selengkapnya </a></p>
+<article *ngFor="let blog of blogPosts | async " (click)="goto(blog)">
+  <div class="thumbnail">
+    <img src="./assets/afif-min.jpg" alt="" class="img-cover">
+  </div>
+  <div class="content">
+    <h3>{{ blog.title }}</h3>
+    <h4>{{ blog.date }}</h4>
+    <p>{{ blog.description }}</p>
+    <p>Created by {{blog.authorName}}</p>
+    <p><a [routerLink]="blog.route"> Baca Selengkapnya </a></p>
+</div>
 </article>
+<div class="pagination-loc">
+  <!-- <pagination [totalItems]="30"></pagination> -->
+<pagination [totalItems]="blogs.length" [maxSize]="5" (pageChanged)="pageChanged($event)"></pagination>
+</div>
+
 <!-- <article (click)="goto(blog)" *ngFor="let blog of blogs.slice(1, blogs.length)">
   <h3>Episode #{{ blog.number }}</h3>
   <h2>{{ blog.title }}</h2>
