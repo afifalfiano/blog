@@ -24,7 +24,7 @@ jobs:
       # - name: Scully Publish
       - uses: cmgriffing/scully-gh-pages-action@v8
         with:
-          access-token: 27edf2d78714f1c6c80865b97188cf856a7d3cee
+          ACCESS_TOKEN: 3fdd0764ccaf77b4a42e59a8c13b63fea1586ac0
       # - name: Build 
       - run: |
           npm install
@@ -33,6 +33,6 @@ jobs:
       #  name: Deploy
       - uses: JamesIves/github-pages-deploy-action@releases/v3 
         with:
-          GITHUB_TOKEN: 27edf2d78714f1c6c80865b97188cf856a7d3cee
+          GITHUB_TOKEN: 3fdd0764ccaf77b4a42e59a8c13b63fea1586ac0
           BRANCH: gh-pages
           FOLDER: dist/blog
