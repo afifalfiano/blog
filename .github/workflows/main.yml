@@ -33,6 +33,6 @@ jobs:
       #  name: Deploy
       - uses: JamesIves/github-pages-deploy-action@releases/v3 
         with:
-          GITHUB_TOKEN: 3fdd0764ccaf77b4a42e59a8c13b63fea1586ac0
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist/blog
