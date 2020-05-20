@@ -21,8 +21,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      # - name: Scully Publish
-       - uses: cmgriffing/scully-gh-pages-action@v8
+      - name: Scully Publish
+      - uses: cmgriffing/scully-gh-pages-action@v8
          with:
            ACCESS-TOKEN: 3fdd0764ccaf77b4a42e59a8c13b63fea1586ac0
       # - name: Build 
