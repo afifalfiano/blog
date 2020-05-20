@@ -1,4 +1,5 @@
 h1 {
+<<<<<<< HEAD
     font-weight: 400;
     font-size: 2em;
     text-align: center;
@@ -35,3 +36,104 @@ h1 {
     color: #000;
   }
   
+=======
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+article {
+  border: 2px solid #eee;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  width: 60%;
+  max-width: 1200px;
+  min-width: 300px;
+  margin: auto auto 20px;
+  position: relative;
+  display: flex;
+}
+.thumbnail {
+  max-width: 35%;
+  flex: 1;
+}
+
+.img-cover {
+  width: 100%;
+  /* filter: grayscale(100%); */
+  transition: 0.4s ease-in;
+}
+
+/* .img-cover:hover {
+  filter: none;
+  transition: 0.4s ease-out;
+} */
+
+.content {
+  flex:1;
+  padding: 1em 1.7em;
+}
+a {
+  color: #222;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #000;
+}
+
+.pagination-loc {
+  font-size: 14px;
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  min-width: 300px;
+  margin: auto auto 20px;
+}
+
+.title {
+  clear: both;
+  font-size: 1.6em;
+  font-weight: 500;
+  color:#444;
+  padding:10px 0;
+}
+
+.date{
+  float: right;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.desc{
+  text-align: justify;
+  margin-bottom: 60px;
+}
+
+.category{
+  font-size: 14px;
+  float: left;
+  font-style: italic;
+}
+
+.img-author{
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.author{
+  padding:0;
+  margin:0;
+}
+>>>>>>> 250f58532a58470695cb9f7c16887d7b03bcf757
