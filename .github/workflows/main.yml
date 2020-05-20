@@ -24,7 +24,7 @@ jobs:
       # - name: Scully Publish
       - uses: cmgriffing/scully-gh-pages-action@v8
         with:
-          ACCESS_TOKEN: 3fdd0764ccaf77b4a42e59a8c13b63fea1586ac0
+          ACCESS-TOKEN: 3fdd0764ccaf77b4a42e59a8c13b63fea1586ac0
       # - name: Build 
       - run: |
           npm install
