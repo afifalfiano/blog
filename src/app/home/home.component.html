@@ -4,7 +4,7 @@
 
 <article *ngFor="let blog of blogPosts | async ">
   <div class="thumbnail">
-    <img src="./assets/post.jpg" alt="" class="img-cover" (click)="goto(blog)">
+    <img src="assets/post.jpg" alt="" class="img-cover" (click)="goto(blog)">
   </div>
   <div class="content">
     <h5 class="category">{{blog.category}}</h5>
@@ -12,7 +12,7 @@
     <h3 class="title">{{ blog.title }}</h3>
     <p class="desc">{{ blog.description }} <a [routerLink]="blog.route"> Baca Selengkapnya </a></p>
   
-    <p class="author"><img src="./assets/afif-min.jpg" alt="AfifAlfiano" class="img-author"> {{blog.authorName}}</p>
+    <p class="author"><img src="assets/afif-min.jpg" alt="AfifAlfiano" class="img-author"> {{blog.authorName}}</p>
 </div>
 </article>
 <div class="pagination-loc">
