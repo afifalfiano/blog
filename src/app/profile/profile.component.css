@@ -36,6 +36,7 @@ article.blog::after{
     margin: auto;
     width:60%;
     margin-top:20px;
+    font-size: 14px;
 }
 img.myProfile{
     padding: 2px;

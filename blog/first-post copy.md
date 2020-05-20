@@ -5,6 +5,7 @@ publish: true
 authorName: Afif Alfiano
 slug: first-post
 date: 19 Mei 2020
+category: Test
 ---
 
 # first-post

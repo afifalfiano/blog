@@ -5,6 +5,7 @@ publish: true
 authorName: Afif Alfiano
 slug: menulis-kenapa-tidak
 date: 19 Mei 2020
+category: Test
 ---
 
 # Menulis? Kenapa Tidak…

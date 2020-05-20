@@ -2,16 +2,17 @@
 
 <h1>Sharing is Caring</h1>
 
-<article *ngFor="let blog of blogPosts | async " (click)="goto(blog)">
+<article *ngFor="let blog of blogPosts | async ">
   <div class="thumbnail">
-    <img src="./assets/afif-min.jpg" alt="" class="img-cover">
+    <img src="./assets/post.jpg" alt="" class="img-cover" (click)="goto(blog)">
   </div>
   <div class="content">
-    <h3>{{ blog.title }}</h3>
-    <h4>{{ blog.date }}</h4>
-    <p>{{ blog.description }}</p>
-    <p>Created by {{blog.authorName}}</p>
-    <p><a [routerLink]="blog.route"> Baca Selengkapnya </a></p>
+    <h5 class="category">{{blog.category}}</h5>
+    <h4 class="date">{{ blog.date }}</h4>
+    <h3 class="title">{{ blog.title }}</h3>
+    <p class="desc">{{ blog.description }} <a [routerLink]="blog.route"> Baca Selengkapnya </a></p>
+  
+    <p class="author"><img src="./assets/afif-min.jpg" alt="AfifAlfiano" class="img-author"> {{blog.authorName}}</p>
 </div>
 </article>
 <div class="pagination-loc">
