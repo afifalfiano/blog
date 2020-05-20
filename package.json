@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --stats-json",
+    "build": "ng build",
+    "deploy": "ng build --stats-json --prod && npm run scully && echo 'https://afifalfiano.github.io/blog/' > ./dist/static/CNAME",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully && echo 'https://afifalfiano.github.io/blog/' > ./dist/static/CNAME",
+    "scully": "scully",
     "scully:serve": "scully serve"
   },
   "private": true,
