@@ -29,7 +29,7 @@ article.blog::after {
   }
 
 article.blog::after{
-    background-image: url(/assets/profile-min.jpg);
+    background-image: url(assets/profile-min.jpg);
 }
 
 .about{
