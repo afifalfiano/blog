@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully -- --scanRoutes && echo 'https://afifalfiano.github.io/blog/' > ./dist/static/CNAME",
+    "scully": "scully -- --scanRoutes && echo 'https://afifalfiano.github.io/blog/' > dist/static/CNAME",
     "scully:serve": "scully serve"
   },
   "private": true,
