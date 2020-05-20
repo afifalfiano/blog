@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # - name: Checkout
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v1
       - uses: actions/setup-node@v1 #this installs node and npm for us
         with:
           node-version: '10.x'
@@ -26,11 +26,11 @@ jobs:
         with:
           access-token: 27edf2d78714f1c6c80865b97188cf856a7d3cee
       # - name: Build 
-        run: |
+      - run: |
           npm install
           npm run-script deploy
       # - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3 
+      - uses: JamesIves/github-pages-deploy-action@releases/v3 
         with:
           GITHUB_TOKEN: 27edf2d78714f1c6c80865b97188cf856a7d3cee
           BRANCH: master
