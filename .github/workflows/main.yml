@@ -23,6 +23,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: Scully Publish
       - uses: cmgriffing/scully-gh-pages-action@v8
+        with:
+          access-token: 27edf2d78714f1c6c80865b97188cf856a7d3cee
       - name: Build 
         run: |
           npm install
@@ -30,6 +32,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3 
         with:
-          access-token: 27edf2d78714f1c6c80865b97188cf856a7d3cee
+          GITHUB_TOKEN: 27edf2d78714f1c6c80865b97188cf856a7d3cee
           BRANCH: master
           FOLDER: dist/static
