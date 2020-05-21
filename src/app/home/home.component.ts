@@ -20,9 +20,10 @@ export class HomeComponent implements OnInit {
   returnedArray: string[];
 
   constructor(private blogsSvc: Blogs, private routerSvc: Router,
-              private scullySvc: ScullyRoutesService) {}
+              private scullySvc: ScullyRoutesService) {
+              }
 
-  ngOnInit(): void {
+  private getData(){
     this.blogPosts = this.scullySvc.available$.pipe(
       map(routes =>
         routes.filter(
@@ -34,15 +35,21 @@ export class HomeComponent implements OnInit {
 
     this.scullySvc.available$.subscribe(data => {
       data.forEach((n) => this.blogs.push(n));
+      this.returnedArray = this.blogs.slice(2, 7);
     });
+  }
+
+  ngOnInit(): void{
+    this.getData();
     console.log(this.blogs);
+    console.log(this.returnedArray);
 
   }
 
-  pageChanged(event: PageChangedEvent) {
+  pageChanged(event: PageChangedEvent): void {
     const startItem = (event.page - 1) * event.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
-    this.blogs = this.blogs.slice(startItem, endItem);
+    this.returnedArray = this.blogs.slice(startItem, endItem);
   }
 
   goto(blog: Blog) {

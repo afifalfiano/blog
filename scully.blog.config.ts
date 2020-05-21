@@ -1,7 +1,7 @@
 const {MinifyHtml} = require('scully-plugin-minify-html');
-const {DisableAngular} = require('scully-plugin-disable-angular');
+// const {DisableAngular} = require('scully-plugin-disable-angular');
 
-const postRenderers = [DisableAngular, MinifyHtml];
+const postRenderers = [MinifyHtml];
 
 exports.config = {
   projectRoot: './src',
