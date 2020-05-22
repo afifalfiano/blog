@@ -15,15 +15,15 @@ export interface Blog {
   styleUrls: ['./current-post.component.css']
 })
 export class CurrentPostComponent implements OnInit {
-  @ViewChild(HomeComponent) dataBlogs;
+  // @ViewChild(HomeComponent) dataBlogs;
   @Input() blog: Blog;
 
 
   constructor(
     private routerSvc: Router
   ) {
-    console.log(this.blog);
-    console.log(this.dataBlogs);
+    console.log('ini current post', this.blog);
+    // console.log(this.dataBlogs);
   }
   ngOnInit(){
   }

@@ -15,7 +15,7 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class HomeComponent implements OnInit {
-  blogs: any = [];
+  @Input() blogs: any = [];
   blogPosts: any = [];
   returnedArray: string[];
 
