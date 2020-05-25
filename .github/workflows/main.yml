@@ -28,8 +28,8 @@ jobs:
       # - name: Build 
       - run: |
           npm install
-          ng build --prod --stats-json --base-href="https://afifalfiano.github.io/blog"
-          scully -- --scanRoutes --base-href= "https://afifalfiano.github.io/blog"
+          npm run-script build
+          npm run-script scully
           npm run-script print
       #  name: Deploy
       - uses: cmgriffing/scully-gh-pages-action@v8

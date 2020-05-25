@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --stats-json --base-href= 'https://afifalfiano.github.io/blog'",
+    "build": "ng build --prod --stats-json --base-href 'https://afifalfiano.github.io/blog'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully -- --scanRoutes --base-href= 'https://afifalfiano.github.io/blog'",
+    "scully": "scully -- --scanRoutes --base-href 'https://afifalfiano.github.io/blog'",
     "print": "echo 'afifalfiano.github.com/blog' > dist/static/CNAME",
     "scully:serve": "scully serve"
   },
