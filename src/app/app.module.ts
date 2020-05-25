@@ -18,6 +18,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     ScullyLibModule,
     PaginationModule.forRoot(),
     RouterModule.forRoot([
+      { path: 'blog',
+      loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
       {
         path: '',
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
@@ -26,8 +28,6 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       },
-      { path: 'blog',
-      loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     ]),
   ],
   providers: [],
